@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frigorífico Nordeste Sabor - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
+<script>
+    (function () {
+        window.onload = function () {
+            new BlipChat()
+                .withAppKey('dGFrZWJsaXBjZGEyOmNiMTIxNzk2LTEwNWEtNDc2Yy05NDAxLTQ0MDFjOGRkMmJhZQ==')
+                .withButton({"color":"#E30613","icon":"https://blipmediastore.blip.ai/public-medias/Media_40a9dd69-247e-4c85-b0bd-c017402f745f"})
+                .withCustomCommonUrl('https://cda-tixwp.chat.blip.ai/')
+                .build();
+        }
+    })();
+</script>
+            
+    <header>
+        <div class="logo-container">
+            <img src="https://www.masterboi.com.br/assets/imgs/logo-masterboi.svg" alt="Logo Masterboi" class="logo">
+        </div>
+        <h1>Frigorífico Nordeste Sabor</h1>
+        <p>Dashboard de Remessas e Operações - 2025</p>
+    </header>
+    <main>
+        <section class="charts">
+            <h2>Remessas Internacionais</h2>
+            <div class="chart-container">
+                <canvas id="freteChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="tempoTransporteChart"></canvas>
+            </div>
+        </section>
+        <section class="charts">
+            <h2>Desempenho Operacional</h2>
+            <div class="chart-container">
+                <canvas id="faturamentoUnidadesChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="cortesCarneChart"></canvas>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
