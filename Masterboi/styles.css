@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #F5F5F5; /* Cinza claro para o fundo geral */
+    color: #333333; /* Texto em cinza escuro para contraste */
+    line-height: 1.6;
+}
+
+header {
+    background: #E30613; /* Vermelho Masterboi */
+    color: #FFFFFF; /* Branco para o texto */
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo-container {
+    background: #FFFFFF; /* Fundo branco para o logo */
+    display: inline-block; /* Ajusta o tamanho ao conteúdo */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 1rem; /* Espaço entre o logo e o título */
+}
+
+header .logo {
+    max-width: 200px; /* Ajusta o tamanho do logo */
+    display: block; /* Garante que a imagem fique centralizada */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.charts {
+    margin-bottom: 3rem;
+}
+
+.charts h2 {
+    font-size: 1.8rem;
+    color: #E30613; /* Vermelho Masterboi para os títulos */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.chart-container {
+    background: #FFFFFF; /* Branco para o fundo dos gráficos */
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .charts {
+        display: block;
+    }
+
+    .chart-container {
+        width: 100%;
+        max-width: 800px;
+    }
+}
