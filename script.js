@@ -1,3 +1,18 @@
+// Simulação de Login
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+    // Oculta a tela de login e mostra o dashboard
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'block';
+
+    // Inicializa o chat da Blip apenas após o login
+    new BlipChat()
+        .withAppKey('dGFrZWJsaXBjZGEyOmNiMTIxNzk2LTEwNWEtNDc2Yy05NDAxLTQ0MDFjOGRkMmJhZQ==')
+        .withButton({"color":"#E30613","icon":"https://blipmediastore.blip.ai/public-medias/Media_40a9dd69-247e-4c85-b0bd-c017402f745f"})
+        .withCustomCommonUrl('https://cda-tixwp.chat.blip.ai/')
+        .build();
+});
+
 // JSONs (substitua pelos seus JSONs completos)
 const remessasData = {
     "remessas_internacionais": [
@@ -72,7 +87,7 @@ new Chart(tempoCtx, {
     }
 });
 
-// Gráfico de Faturamento por Unidade (com cores variadas)
+// Gráfico de Faturamento por Unidade
 const faturamentoCtx = document.getElementById('faturamentoUnidadesChart').getContext('2d');
 new Chart(faturamentoCtx, {
     type: 'pie',
