@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frigorífico Nordeste Sabor - Dashboard</title>
+    <title>Frigorífico Nordeste Sabor - Login</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Incluímos o script do Blip Chat aqui, mas ele será inicializado no script.js -->
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
 </head>
 <body>
-    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
-<script>
-    (function () {
-        window.onload = function () {
-            new BlipChat()
-                .withAppKey('dGFrZWJsaXBjZGEyOmNiMTIxNzk2LTEwNWEtNDc2Yy05NDAxLTQ0MDFjOGRkMmJhZQ==')
-                .withButton({"color":"#E30613","icon":"https://blipmediastore.blip.ai/public-medias/Media_40a9dd69-247e-4c85-b0bd-c017402f745f"})
-                .withCustomCommonUrl('https://cda-tixwp.chat.blip.ai/')
-                .build();
-        }
-    })();
-</script>
-            
-    <header>
-        <div class="logo-container">
+    <!-- Tela de Login -->
+    <div id="login-screen">
+        <div class="login-container">
             <img src="https://www.masterboi.com.br/assets/imgs/logo-masterboi.svg" alt="Logo Masterboi" class="logo">
+            <h2>Frigorífico Nordeste Sabor</h2>
+            <p>Faça login para acessar o dashboard</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" placeholder="Digite seu usuário" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
         </div>
-        <h1>Frigorífico Nordeste Sabor</h1>
-        <p>Dashboard de Remessas e Operações - 2025</p>
-    </header>
-    <main>
-        <section class="charts">
-            <h2>Remessas Internacionais</h2>
-            <div class="chart-container">
-                <canvas id="freteChart"></canvas>
+    </div>
+
+    <!-- Dashboard (inicialmente oculto) -->
+    <div id="dashboard" style="display: none;">
+        <header>
+            <div class="logo-container">
+                <img src="https://www.masterboi.com.br/assets/imgs/logo-masterboi.svg" alt="Logo Masterboi" class="logo">
             </div>
-            <div class="chart-container">
-                <canvas id="tempoTransporteChart"></canvas>
-            </div>
-        </section>
-        <section class="charts">
-            <h2>Desempenho Operacional</h2>
-            <div class="chart-container">
-                <canvas id="faturamentoUnidadesChart"></canvas>
-            </div>
-            <div class="chart-container">
-                <canvas id="cortesCarneChart"></canvas>
-            </div>
-        </section>
-    </main>
+            <h1>Frigorífico Nordeste Sabor</h1>
+            <p>Dashboard de Remessas e Operações - 2025</p>
+        </header>
+        <main>
+            <section class="charts">
+                <h2>Remessas Internacionais</h2>
+                <div class="chart-container">
+                    <canvas id="freteChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="tempoTransporteChart"></canvas>
+                </div>
+            </section>
+            <section class="charts">
+                <h2>Desempenho Operacional</h2>
+                <div class="chart-container">
+                    <canvas id="faturamentoUnidadesChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="cortesCarneChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
